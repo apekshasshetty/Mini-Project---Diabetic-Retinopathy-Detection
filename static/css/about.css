@@ -1,0 +1,65 @@
+/* Add this CSS to your about.css file */
+.stage-images {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.stage-image {
+    max-width: 60px; /* Adjust the size of the images as needed */
+    height: auto;
+    margin: 0 5px;
+}
+
+/* Style the buttons */
+#prevStageBtn,
+#nextStageBtn {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+}
+
+
+.about-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.about-text {
+    text-align: center;
+}
+
+.header-text {
+    margin-bottom: 20px;
+    font-size: 5x;
+}
+
+.description {
+    text-align: justify;
+    font-size: 20px;
+}
+
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none; /* remove bullet points */
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+}
+
+.nav-links li {
+    margin-right: 20px; /* adjust spacing between links */
+}
+
+.nav-links a {
+    color: black; /* link color */
+    text-decoration: none; /* remove underline */
+}
+
+.nav-links a:hover {
+    opacity: 0.5; /* reduce opacity on hover */
+}
