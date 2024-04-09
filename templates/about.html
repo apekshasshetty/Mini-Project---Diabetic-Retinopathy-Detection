@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/about.css') }}">
+</head>
+<body>
+    <header>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="container mt-5">
+            <div class="about-container">
+                <div class="about-text">
+                    <h1 class="header-text">About Diabetic Retinopathy</h1>
+                    <div class="description">
+                        <!-- Container giving description about diabetic retinopathy -->
+                        <p> "Our team of experienced ophthalmologists is dedicated to providing you with a personalized approach to diagnosing diabetic retinopathy.
+                        You can conveniently upload detailed images of your retina directly to our secure platform. Additionally, you'll be able to share your health background with your chosen doctor. By combining this information with advanced diagnostic tools and predictive models, our doctors can accurately assess your condition, determine the stage of diabetic retinopathy, and suggest the most appropriate treatment options for you. This multifaceted approach ensures a streamlined diagnosis and empowers you to take control of your eye health."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <h2 class="intro-text">Stages of Diabetic Retinopathy</h2>
+            <div class="stage-container">
+                <button class="btn btn-secondary" id="prevStageBtn">&lt;</button>
+
+                <div class="stage-images col-10 text-center">
+                    <img src="{{ url_for('static', filename='images/M.jpg') }}" alt="Stage 1" class="stage-image" data-index="0" data-description="This is the earliest stage of diabetic retinopathy, characterized by tiny areas of swelling in the blood vessels of the retina. These areas of swelling are known as micro aneurysms.">
+                    <img src="{{ url_for('static', filename='images/Mod.jpg') }}" alt="Stage 2" class="stage-image" data-index="1" data-description="Increased swelling of tiny blood vessels starts to interfere with blood flow to the retina, preventing proper nourishment. This causes an accumulation of blood and other fluids in the macula.">
+                    <img src="{{ url_for('static', filename='images/Proli.jpg') }}" alt="Stage 3" class="stage-image" data-index="2" data-description="A larger section of blood vessels in the retina become blocked, causing a significant decrease in blood flow to this area. At this point, the body receives signals to start growing new blood vessels in the retina.">
+                    <img src="{{ url_for('static', filename='images/Severe.jpg') }}" alt="Stage 4" class="stage-image" data-index="3" data-description="This is an advanced stage of the disease, in which new blood vessels form in the retina. Since these blood vessels are often fragile, there’s a higher risk of fluid leakage. This triggers different vision problems such as blurriness, reduced field of vision, and even blindness.">
+                </div>
+                <div class="col-1 text-center">
+                <button class="btn btn-secondary" id="nextStageBtn">&gt;</button>
+            </div>
+                </div>
+            <div class="stage-description-container">
+                <p class="stage-description"></p>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/about.js') }}"></script>
+</body>
+</html>

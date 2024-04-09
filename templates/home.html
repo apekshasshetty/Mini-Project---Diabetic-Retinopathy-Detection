@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+
+<header>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+        </ul>
+    </header>
+
+<main>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1 class="header-text">Diabetic Retinopathy Detection</h1>
+                <h2 class="intro-text">Protect Your Sight: Early detection of diabetic retinopathy</h2>
+                <p class="intro-text">We are here for your care</p>
+                <p class="link">Click below to proceed for prediction.</p>
+                 <div class="btn-container">
+                <button class="btn btn-primary" id="predictionBtn" onclick="redirectToIndexPage()">Click Here <i class="fa fa-angle-down"></i></button>
+                <script>
+                    function redirectToIndexPage() {
+                    window.location.href = "/index";
+                }
+                </script>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
+<script>
+    function redirectToIndexPage() {
+        window.location.href = "/index";
+    }
+</script>
+</body>
+</html>
